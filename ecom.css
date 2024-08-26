@@ -1,0 +1,128 @@
+body{
+    height: 100vh;
+}
+
+header{
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    background-color: rgb(142, 141, 141);
+    z-index: 999;
+    position: sticky;
+    left: 0;
+    top: 0;
+}
+.hero-img{
+    background-image: url('./Assets/heroimg.jpg');
+    height: 80%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    border-radius: 8px;
+}
+
+.img-text{
+    color: white;
+    text-align: left;
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    transform: translate(-20%, -50%);
+}
+.center ,.About{
+    text-align: center;
+    margin-top: 5px;
+}
+
+
+.footer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 90px;
+}
+
+
+/*Login*/
+#Message{
+margin: 10px 0;
+
+}
+
+.Login-container, .Register-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+input[type=text], input[type=password] {
+    width: 20%;
+    padding: 12px 20px;
+    margin: 10px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+  
+  .psw{
+    margin: 8px;
+  }
+
+  
+
+  /*About*/
+  .cards {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 100%;
+  }
+  .cards img{
+    width: 100%;
+    height: 250px;
+  }
+  
+  .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+  
+ h5{
+  padding: 10px;
+ }
+
+  .Our-Products-Container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-items: center;
+  }
+
+  @media (max-width:799px) {
+  
+  }
+
+  .Products-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap:30px;
+    margin-top: 50px;
+    justify-items: center;
+  }
+
+
+
+  .detailed-section{
+    margin: 40px;
+    display: flex;
+    flex-direction: row;
+
+  }
+  .image{
+    border: 1px red solid;
+    width: 40%;
+    margin-right:50px ;
+  }
+  .description{
+    width: 50%;
+  }
