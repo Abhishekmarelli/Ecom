@@ -95,12 +95,14 @@ const details = (id)=>{
 
 }
 
+const cartitems = document.getElementById('cartitems')
 
+const cartlist=()=>{
 
+  let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
-
-
-
+  cartitems.innerText = cart.length
+}
 
 const addtocart = (id) => {
   
@@ -116,7 +118,6 @@ const addtocart = (id) => {
     const existingProductIndex = cart.findIndex((item) => item.id === id);
 
     if (existingProductIndex !== -1) {
-  
 
       cart[existingProductIndex].quantity = (cart[existingProductIndex].quantity || 0) + 1;
     } else {
@@ -130,49 +131,9 @@ const addtocart = (id) => {
   {
     console.error('Product not found');
   }
+  cartlist();
+
 };
 
 
-
-// const displayitem =(items)=>{
-
-
-//   console.log(items)
-
-//   items.map((item)=>{
-
-//       const cartitemcard = document.createElement('div')
-//       cartitemcard.innerHTML=`
-//       <div>Hello</div>
-//       `
-//     cartitem.appendChild(cartitemcard)
-//   })
-
-// }
-
-
-
-
-
-//cart
-// var cartarray = [];
-
-// const addtocart = (id)=>{
-
-//   const cartitem = productdata.find((p)=>p.id === id);
-//   cartarray.push(cartitem)
-
-//   displayitem(cartarray)
-
-
-// }
-
-
-// const displayCartFromLocalStorage = () => {
-//   // Retrieve cart items from local storage
-//   const storedCart = localStorage.getItem('cart');
-//   if (storedCart) {
-//     cartarray = JSON.parse(storedCart);
-//     console.log(cartarray)
-//   }
-// };
+cartlist();

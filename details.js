@@ -20,8 +20,8 @@ document.addEventListener('DOMContentLoaded', () => {
          <p class="lead">4.7 <i class="fa fa-star"></i></p>
         <h3 class="display-6  my-4">$${productDetails.price}</</h3>
         <p class="lead">${productDetails.description}</p>
-        <button class="btn btn-outline-dark">Add to Cart</button><a class="btn btn-dark mx-3"
-         href="/cart">Go to Cart</a>
+        <button class="btn btn-outline-dark" onclick='addtocart(${productDetails.id})'>Add to Cart</button>
+        <a class="btn btn-dark mx-3" href="cart.html">Go to Cart</a>
     </div>
       `;
 
@@ -32,5 +32,4 @@ document.addEventListener('DOMContentLoaded', () => {
         productDetailsContainer.innerHTML = '<p>Product details not found.</p>';
     }
 });
-
 
